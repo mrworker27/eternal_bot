@@ -1,14 +1,14 @@
 import logging
 
 TG_TOKEN = "1225125611:AAFskmF899-5tRCd9IZgv240Nq3XV6CgXiM"
-TG_NEED_PROXY = False
+TG_NEED_PROXY = True
 TG_PROXY = "https://telegg.ru/orig/bot"
 
 LOGGER_FORMAT = '%(asctime)s %(levelname)s\t# %(message)s'
 
 DEFAULT_LOGGER_LEVEL = logging.WARNING
 ETERNAL_LOGGER_LEVEL = logging.INFO
-STDOUT_LOG = False
+STDOUT_LOG = True
 LOG_FILE = "eternal.log"
 
 def stdout_log():

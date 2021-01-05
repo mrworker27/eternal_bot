@@ -649,6 +649,8 @@ def start_handler(update, context):
     context.user_data["username"] = update.effective_user.username
     context.user_data["first_name"] = update.effective_user.first_name
     context.user_data["last_name"]  = update.effective_user.last_name
+
+    print(context.user_data)
     
     if TBindedLogger.get_logger(context.user_data["uid"]).logger is None: 
         logger = logging.getLogger("logger_%s" % context.user_data["uid"])

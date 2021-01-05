@@ -10,7 +10,8 @@ CREATE TABLE settings (
     ask_task_interval INT DEFAULT (15 * 60),
     sleep_interval INT DEFAULT (15 * 60), 
     sleep_time INT DEFAULT (9 * 60 * 60),
-    alarm_rate INT DEFAULT (30 * 60)
+    alarm_rate INT DEFAULT (30 * 60),
+    time_zone INT DEFAULT (3 * 60)
 );
 
 CREATE TABLE state (

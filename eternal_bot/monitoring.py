@@ -100,14 +100,20 @@ class TInspector(EternalBase):
             return
 
         for job in self.task_key[key]:
-            job.job.schedule_removal()
+            if not job.job.removed:
+                job.job.schedule_removal()
 
     def remove_job_by_id(self, job_id):
         self.task_id[job_id].job.schedule_removal()
 
     def toogle_job_by_key(self, key, enable):
+        if key not in self.task_key:
+            self.logger.debugg("No key in task_key")
+            return
+
         for job in self.task_key[key]:
-            job.job.enabled = enable
+            if not job.job.removed:
+                job.job.enabled = enable
 
     def toogle_job_by_id(self, job_id, enable):
        self.task_id[job_id].job.enabled = enable
