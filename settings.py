@@ -1,6 +1,6 @@
 import logging
 
-TG_TOKEN = "1225125611:AAFskmF899-5tRCd9IZgv240Nq3XV6CgXiM"
+TG_TOKEN = # COPY TELEGRAM TOKEN HERE
 TG_NEED_PROXY = True
 TG_PROXY = "https://telegg.ru/orig/bot"
 
